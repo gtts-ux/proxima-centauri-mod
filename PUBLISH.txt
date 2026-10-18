@@ -1,0 +1,19 @@
+Repository: https://github.com/gtts-ux/proxima-centauri-mod
+App: https://github.com/gtts-ux/solar-sim
+
+The mod's main branch supplies proxima-centauri.json to Solar Sim v1.7.0+.
+No separate mod release or pip install is required. Users install it with:
+
+    sol-sim -m"proxima centauri"
+
+Inside Solar Sim, use /proxima centauri (or /proxima centari).
+/proxima exit returns to normal planets.
+
+To publish future data updates, edit proxima-centauri.json, increment its
+version and run python3 -m unittest -v. Commit and push to main with your
+authenticated Git client. GitHub Actions also checks that the published
+Solar Sim download can install the exact package from this repository.
+
+The installer falls back to the app's bundled package when the mod repository
+is unreachable and identifies that source in its message. It never downgrades
+a newer installed mod. Updating the app preserves the installed mods/ folder.
